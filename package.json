@@ -1,0 +1,29 @@
+{
+  "name": "ldt",
+  "version": "1.0.0",
+  "description": "Lightweight Decorator for Textareas",
+  "main": "ldt.js",
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild src/index.js --bundle --outfile=ldt.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dy/LDT.git"
+  },
+  "keywords": [
+    "ldt",
+    "syntax",
+    "highlight"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dy/LDT/issues"
+  },
+  "homepage": "https://github.com/dy/LDT#readme"
+}
