@@ -1,4 +1,5 @@
 # Lightweight Decorator for Textareas
+
 ## In browser live syntax highlighting
 
 LDT aims to provide a simple, lightweight, and highly extensible alternative to existing in-browser live syntax highlighting solutions by leveraging clever CSS and native functionality. Other solutions often re-implement large parts of the user interaction, or use inconsistent pseudo-standard features such as contentEditable and designMode. This results in either a lack of native functionality or a large code-base to compensate or both.
@@ -16,7 +17,9 @@ LDT was developed by Colin Kuebler originally as part of *The Koala Project*. Sp
 *\* Undo & redo has been known to break when you modify the textarea's contents programmatically (which is why LDT doesn't do this by default). It might be possible to regain this functionality by implementing your own undo stack.*
 
 ## Using LDT
+
 Making an auto highlighting `textarea` is easy with LDT. Make sure to include the modules you need either directly in your code (less server requests) or using the HTML `script` tag. Minify in production for bandwidths sake. Below is a simple example of LDT usage. See `examples` directory for more.
+
 ### HTML
 ```html
 <!-- normal textarea fall-back, add an id to access it from javascript -->
@@ -24,6 +27,7 @@ Making an auto highlighting `textarea` is easy with LDT. Make sure to include th
 <noscript>Please enable JavaScript to allow syntax highlighting.</noscript>
 ```
 ### JS
+
 ```js
 // create a parser with a mapping of css classes to regular expressions
 // everything must be matched, so 'whitespace' and 'other' are commonly included
@@ -49,17 +53,8 @@ var ldt = new TextareaDecorator( $('codeArea'), parser );
 }
 ```
 
-## Browser Support
-LDT has been tested on
-
- * Firefox 3.6 - 80
- * Internet Explorer 8 - 11
- * Chromium & Google Chrome 16 - 85
- * Midori 4.1
- * Opera 11.61
- * Epiphany
-
 ## API
+
 ### TextareaDecorator
 
  + `new TextareaDecorator( textarea, parser )` Converts a HTML `textarea` element into an auto highlighting TextareaDecorator. `parser` is used to determine how to subdivide and style the content. `parser` can be any object which defines the `tokenize` and `identify` methods as described in the Parser API below.
